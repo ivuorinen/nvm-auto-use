@@ -7,15 +7,17 @@ on:
     branches:
       - main
     paths:
+      - .github/workflows/sync-labels.yml
       - .github/labels.yml
   schedule:
     - cron: "34 5 * * *"
   workflow_call:
   workflow_dispatch:
 
-permissions:
-  issues: write
-
 jobs:
   SyncLabels:
-    uses: ivuorinen/.github/.github/workflows/sync-labels.yml@main
+    permissions:
+      issues: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ivuorinen/actions/sync-labels@main
