@@ -12,4 +12,4 @@ jobs:
     name: PR Lint
     runs-on: ubuntu-latest
     steps:
-      - uses: ivuorinen/actions/pr-lint@84380fe01733b915ffea5892083ee636ed2b765a # v2026.05.04
+      - uses: ivuorinen/actions/pr-lint@de31e11dda6488eabe95e951ebb61c6d9d500865 # v2026.06.30
